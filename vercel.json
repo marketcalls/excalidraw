@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://draw.marketcalls.in"
+          "value": "https://excalidraw.com"
         },
         {
           "key": "X-Content-Type-Options",
@@ -31,7 +31,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://draw.marketcalls.in"
+          "value": "https://excalidraw.com"
         }
       ]
     },
@@ -53,11 +53,18 @@
     {
       "source": "/webex/:match*",
       "destination": "https://for-webex.excalidraw.com"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vscode.excalidraw.com"
+        }
+      ],
+      "destination": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor"
     }
   ],
   "outputDirectory": "excalidraw-app/build",
-  "installCommand": "yarn install",
-  "buildCommand": "yarn build",
-  "framework": null,
-  "rootDirectory": "excalidraw-app"
+  "installCommand": "yarn install"
 }
